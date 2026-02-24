@@ -13,7 +13,7 @@ function findMax(arr) {
    }, 0);
 }
 
-//console.log(`Maximum Number is: ${findMax(maxArray)}`);
+console.log(`Maximum Number is: ${findMax(maxArray)}`);
 
 
 /* 2. Write a function named countWords that takes a string and returns the number 
@@ -24,7 +24,7 @@ function findMax(arr) {
    return words.length;
  }
 
- //console.log(`Number of words: ${countWords("This is function that gives no of words")}`);
+ console.log(`Number of words: ${countWords("This is a function that gives no of words")}`);
 
 
 
@@ -35,7 +35,7 @@ function calculateDifference(firstNum, secondNum) {
    return firstNum - secondNum;
 }
 
-//console.log(`The difference is: ${calculateDifference(65, 32)}`);
+console.log(`The difference is: ${calculateDifference(65, 32)}`);
 
 
 /* 4. Write a function named filterEvenNumbers that takes an array of numbers and 
@@ -56,21 +56,21 @@ console.log(`Even numbers: ${filterEvenNumbers([4, 3, 6, 24, 7])}`);
  and returns a new array sorted in descending order. */
 
 function sortArrayDescending(array) {
-   return array.sort();
+   return array.sort((a, b) => a - b);
 }
 
-console.log(sortArrayDescending(maxArray));
+console.log(`Sorted Array: ${sortArrayDescending([12, 3, 24, 16, 20])}`);
 
 
 /* 6. Write a function named isLeapYear that takes a year as an argument 
  and returns true if the year is a leap year, and false if it is not. */
+const year = 2000;
 
-const year = 2020;
-
-function isLeapYear(year) {
-   if(year % 4 === 0) return true;
-   else return false;
-}
+const isLeapYear = function(year) {
+    if(!Number.isInteger(year)) return "Error: Enter a valid year.";
+    return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+ 
+};
 
 console.log(`${year} is a Leap year: ${isLeapYear(year)}`);
 
@@ -79,11 +79,11 @@ console.log(`${year} is a Leap year: ${isLeapYear(year)}`);
 // returns the reversed version of that string.
 
 function reverseString(str) {
-   const array = str.split();
-   return array.reverse();
+   const array = str.split('');
+   return array.reverse().join('');
 }
 
-console.log(reverseString('love'));
+console.log(reverseString('Hello World'));
 
 
 // 8. Write a function named sumArray that takes an array of numbers 
