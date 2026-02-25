@@ -13,7 +13,7 @@ function findMax(arr) {
    }, 0);
 }
 
-console.log(`Maximum Number is: ${findMax(maxArray)}`);
+console.log(`Maximum Number of the given array ${maxArray} is: ${findMax(maxArray)}`);
 
 
 /* 2. Write a function named countWords that takes a string and returns the number 
@@ -30,12 +30,14 @@ console.log(`Maximum Number is: ${findMax(maxArray)}`);
 
  /* 3. Write a function named calculateDifference that takes two arguments and returns 
  the difference between the first and second arguments.*/
+const num1 = 54;
+const num2 = 32;
 
 function calculateDifference(firstNum, secondNum) {
    return firstNum - secondNum;
 }
 
-console.log(`The difference is: ${calculateDifference(65, 32)}`);
+console.log(`The difference between ${num1} & ${num2} is: ${calculateDifference(num1, num2)}`);
 
 
 /* 4. Write a function named filterEvenNumbers that takes an array of numbers and 
@@ -55,16 +57,18 @@ console.log(`Even numbers: ${filterEvenNumbers([4, 3, 6, 24, 7])}`);
 /* 5. Write a function named sortArrayDescending that takes an array of numbers 
  and returns a new array sorted in descending order. */
 
+const arraySrt = [12, 3, 24, 16, 20];
+
 function sortArrayDescending(array) {
    return array.sort((a, b) => a - b);
 }
 
-console.log(`Sorted Array: ${sortArrayDescending([12, 3, 24, 16, 20])}`);
+console.log(`Given array: ${arraySrt}, Sorted Array: ${sortArrayDescending(arraySrt)}`);
 
 
 /* 6. Write a function named isLeapYear that takes a year as an argument 
  and returns true if the year is a leap year, and false if it is not. */
-const year = 2000;
+const years = [2000, 1998, 2002, 1988];
 
 const isLeapYear = function(year) {
     if(!Number.isInteger(year)) return "Error: Enter a valid year.";
@@ -72,22 +76,27 @@ const isLeapYear = function(year) {
  
 };
 
-console.log(`${year} is a Leap year: ${isLeapYear(year)}`);
+years.forEach((year) => console.log(`${year} is a Leap year: ${isLeapYear(year)}`))
+
 
 
 // 7. Write a function named reverseString that takes a string and 
 // returns the reversed version of that string.
+
+const myStr = 'Hello World';
 
 function reverseString(str) {
    const array = str.split('');
    return array.reverse().join('');
 }
 
-console.log(reverseString('Hello World'));
+console.log(`Given String: ${myStr}, \n Reversed String: ${reverseString('Hello World')}`);
 
 
 // 8. Write a function named sumArray that takes an array of numbers 
 // and returns the total sum of all elements.
+
+const prices = [34, 56, 23, 3];
 
 function sumArray(arr) {
    return arr.reduce((sum, current) => {
@@ -95,4 +104,4 @@ function sumArray(arr) {
    });
 }
 
-console.log(sumArray([34, 56, 23, 3]));
+console.log(`Sum of ${prices} is: ${sumArray(prices)}`);
